@@ -86,7 +86,7 @@ ApplicationWindow {
                 width: parent.width*0.5
 
                 onCurrentIndexChanged: {
-                    console.log(portDropDown.currentIndex + " " + portDropDown.model[portDropDown.currentIndex]);
+                    //console.log(portDropDown.currentIndex + " " + portDropDown.model[portDropDown.currentIndex]);
                 }
             }
 
@@ -101,7 +101,7 @@ ApplicationWindow {
                 width: parent.width*0.5
 
                 onCurrentIndexChanged: {
-                    console.log(baudDropDown.currentIndex + " " + baudDropDown.model[baudDropDown.currentIndex]);
+                    //console.log(baudDropDown.currentIndex + " " + baudDropDown.model[baudDropDown.currentIndex]);
                 }
             }
 
@@ -119,7 +119,7 @@ ApplicationWindow {
                     window.baudRate = baudDropDown.model[baudDropDown.currentIndex];
 
 
-                    console.log("Serial.portName is: " + serial.portName + " and baud rate is: " + serial.baudRate);
+                    //console.log("Serial.portName is: " + serial.portName + " and baud rate is: " + serial.baudRate);
                     stackView.push("Page1Form.qml", {"portName": portName, "baudRate": baudRate});
                     drawer.close();
                 }

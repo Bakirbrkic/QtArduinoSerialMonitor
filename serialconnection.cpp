@@ -35,12 +35,6 @@ int SerialConnection::getBaudRate()
 
 QString SerialConnection::readLastMessage()
 {
-//    SerialConnection::ba = "";
-//    SerialConnection::receivedMsg = "";
-//    SerialConnection::setBaudRate(baudRate);
-
-//    serial.setPort(serialList.at(portNumber));
-//    serial.open(QIODevice::ReadWrite);
     if(serial.bytesAvailable()>0||serial.waitForReadyRead(10)){
         SerialConnection::ba=serial.readAll();
         //qDebug()<<ba;
@@ -55,7 +49,7 @@ QString SerialConnection::readLastMessage()
 int SerialConnection::sendNewMessage(QString msg)
 {
     serial.write(msg.toStdString().c_str());
-    qDebug()<<"to send"<<msg.toStdString().c_str();
+    //qDebug()<<"to send"<<msg.toStdString().c_str();
     return 1;
 }
 

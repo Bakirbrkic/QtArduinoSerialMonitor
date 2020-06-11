@@ -74,12 +74,12 @@ Page {
     }
 
     Component.onCompleted: {
-        console.log("passed portname: " + portName);
+        //console.log("passed portname: " + portName);
         serial.AllPortsJSON;
         serial.portName = portName;
         serial.baudRate = baudRate;
         serial.beginSerial;
-        console.log("Serial.portName is: " + serial.portName + " and baud rate is: " + serial.baudRate);
+        //console.log("Serial.portName is: " + serial.portName + " and baud rate is: " + serial.baudRate);
         msgTimer.start();
     }
 

@@ -6,8 +6,6 @@ Page {
     title: qsTr("Select Port")
     property string testproperty: "value"
 
-    signal TestPropertyChanged;
-
     Serial{
         id: serial
     }
